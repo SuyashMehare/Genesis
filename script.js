@@ -5,7 +5,7 @@ let context;
 
 let playerWidth = 80;
 let playerHeight = 10;
-let playerVelocityX = 10;
+let playerVelocityX = 50;
 
 let player = {
   x: boardWidth / 2 - playerWidth / 2,
@@ -156,10 +156,16 @@ function movePlayer(e) {
 }
 
 function detectCollision(a, b) {
-    return a.x < b.x + b.width && 
-            a.x + a.width > b.x &&
-            a.y < b.y + b.height &&
-            a.y + a.height > b.y;
+  const value = a.x < b.x + b.width && 
+  a.x + a.width > b.x &&
+  a.y < b.y + b.height &&
+  a.y + a.height > b.y  
+  
+  if(value && ball.velocityX < 10) {
+    ball.velocityX += 2;
+    ball.velocityy += 2;
+  }
+  return value;
 }
 
 function topCollision(ball, block) {
