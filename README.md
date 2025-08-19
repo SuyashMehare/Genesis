@@ -1,7 +1,7 @@
 # Genesis
 
 ### Deploy Link
-`null`
+`https://genesisbreakout.netlify.app/`
 
 Welcome to my Breakout (Brick Breaker) game project! This is a JavaScript-based recreation of the classic Atari arcade game where you control a paddle to bounce a ball and break bricks.
 
